@@ -7,7 +7,7 @@ const numberToGuess = Math.floor(Math.random() * 1000);
 console.log('Я загадал', numberToGuess );
 
 function question(){
-    rl.question('Введите число от 0 до 999', (input) => {
+    rl.question('Введите число от 0 до 999: ', (input) => {
         let numberFromUser = +input;
 
         if (numberFromUser == 'q'){
@@ -19,7 +19,7 @@ function question(){
         if ( isNaN(numberFromUser) 
             || +numberFromUser < 0 
             || +numberFromUser > 999 ){
-                console.log('Это не число от 0 до 999')
+                console.log('Это не число от 0 до 999: ')
         }
 
         if (+numberFromUser == numberToGuess){
